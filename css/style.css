@@ -1,0 +1,90 @@
+
+body{
+    background-color: #fff;
+    margin: 0; padding: 0;
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#fundo{
+    background-color: white;
+    width: 100vw;
+}
+  
+.plateia{
+    width: 50vw;
+    height: 40vh;    
+}
+
+img[class|=raquete]{
+    height: 100px; 
+}
+  
+#right{
+    position: absolute;
+    top: 65%;
+    right: 23vw;
+    transform: rotate(-20deg);
+    animation-timing-function: linear;
+    animation: bolaR 2s infinite alternate;
+}
+
+@keyframes bolaR{
+    0% {transform: rotate(20deg);}
+    50% {transform: rotate(0deg);}
+    100% {transform: rotate(20deg);}
+}
+  
+#left{
+    position: absolute;
+    top: 65%;
+    left: 23vw;
+    transform: rotate(20deg);
+    animation-timing-function: linear;
+    animation: bolaL 2s infinite alternate;
+    animation-delay: 0ms;
+}
+
+@keyframes bolaL{
+    0% {transform: rotate(-40deg);}
+    50% {transform: rotate(0deg);}
+    100% {transform: rotate(-20deg);}
+}
+
+  
+#container{
+    height: 50vh;
+    width: 50vw;
+    background-image: url("https://media.istockphoto.com/photos/table-tennis-table-isolated-picture-id904853290?k=20&m=904853290&s=612x612&w=0&h=HVZjvw7IRPA67oQuwGojOjENJDZL8IycUwEJqSDuXSs=");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+    
+}
+  
+  
+#bola{
+    background-color: rgb(163, 163, 163);
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    position: relative;
+    top:50%;
+    left:0;
+    z-index: 1;
+    transform: translate(-50%,-50%);
+    animation: move 1s infinite;
+    animation-timing-function: linear;
+    animation-direction:alternate-reverse;
+}
+  
+ @keyframes move{
+    from {left:0vw}
+    to {left:50vw}
+}
+
+
+  
